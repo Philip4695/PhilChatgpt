@@ -1,11 +1,21 @@
 import dotenv from 'dotenv';
 import { bot } from './telegramBot.js';
 import { api } from './gpt.js';
+import express from 'express';
+import http from 'http';
 
 dotenv.config({ path: '../config/settings.env' });
 
 let conversationId;
 let lastMsgId;
+
+const app = express();
+app.get('/health', (req, res) => {
+  res.status(200).send('OK');
+});
+
+const server = http.createServer(app);
+server.listen(process.env.PORT || 8080);
 
 bot.on('message', async (msg) => {
   const chatId = msg.chat.id;

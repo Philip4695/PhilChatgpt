@@ -12,6 +12,7 @@
   "dependencies": {
     "chatgpt": "^4.1.1",
     "dotenv": "^16.0.3",
+    "express": "^4.18.2",
     "node-fetch": "^3.3.0",
     "node-telegram-bot-api": "^0.61.0"
   }
