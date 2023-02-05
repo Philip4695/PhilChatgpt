@@ -1,9 +1,6 @@
 import dotenv from 'dotenv';
-import fetch from "node-fetch";
 import { bot } from './telegramBot.js';
 import { api } from './gpt.js';
-
-globalThis.fetch = fetch;
 
 dotenv.config({ path: '../config/settings.env' });
 

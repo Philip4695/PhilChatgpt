@@ -1,8 +1,5 @@
 import dotenv from 'dotenv';
-import fetch from "node-fetch";
 import { ChatGPTAPI } from 'chatgpt';
-
-globalThis.fetch = fetch
 
 dotenv.config({ path: '../config/settings.env' });
 
