@@ -13,3 +13,8 @@ A Telegram bot that utilizes OpenAI's ChatGPT language model to generate respons
 
 ## Using the bot
 To use the bot, simply start a conversation with it in Telegram and send it messages. If you want to start a new GPT3 instance, just send the bot the message `/reset`.
+
+## Made using
+
+[chatgpt-api](https://github.com/transitive-bullshit/chatgpt-api)
+[node-telegram-bot-api](https://www.npmjs.com/package/node-telegram-bot-api)
