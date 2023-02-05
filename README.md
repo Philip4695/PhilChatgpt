@@ -16,5 +16,5 @@ To use the bot, simply start a conversation with it in Telegram and send it mess
 
 ## Made using
 
-[chatgpt-api](https://github.com/transitive-bullshit/chatgpt-api)
-[node-telegram-bot-api](https://www.npmjs.com/package/node-telegram-bot-api)
+- [chatgpt-api](https://github.com/transitive-bullshit/chatgpt-api)   
+- [node-telegram-bot-api](https://www.npmjs.com/package/node-telegram-bot-api)
