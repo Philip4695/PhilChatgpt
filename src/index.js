@@ -9,6 +9,7 @@ dotenv.config({ path: './config/settings.env' });
 
 let conversationId;
 let lastMsgId;
+let lastMsgTxt;
 
 const helpMessage = `*ChatGPT Bot*🤖
 Available commands:
@@ -49,7 +50,7 @@ bot.on('message', async (msg) => {
         bot.sendMessage(chatId, 'No message to retry.');
         break;
       }
-      const response = await api.sendMessage(messageText, {
+      const response = await api.sendMessage(lastMsgTxt, {
         conversationId: conversationId,
         parentMessageId: lastMsgId
       });
@@ -84,6 +85,7 @@ bot.on('message', async (msg) => {
         conversationId = response.conversationId;
         lastMsgId = response.id;
       }
+      lastMsgTxt = messageText;
       bot.editMessageText(response.text, { chat_id: chatId, message_id: sentMsgId, parse_mode: "Markdown" });
       break;
     }
